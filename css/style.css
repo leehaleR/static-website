@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* width: 100% ; */
+}
+
+body{
+    /* background: #fcfcfc; */
+    width: 100%;
+    
+}
+
+
+main{
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    animation: animate 50s ease infinite;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: pink;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+@keyframes animate {
+    0%, 100%{
+        background-image: url(/assets/l1.png);
+    }
+    30%{
+        background-image: url(/assets/l2.png);
+    }
+    50%{
+        background-image: url(/assets/l3.png);
+    }
+    75%{
+        background-image: url(/assets/l4.png);
+    }
+}
+
+#nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: fit-content; */
+    /* position: relative; */
+    /* background: rgb(12, 30, 41); */
+
+    
+}
+.logo{
+    display: flex;
+    align-self: flex-end;
+    font-size: 2.8rem;
+    color: white;
+    padding-left: 150px;
+    /* float: right; */
+    margin-right: 200px;
+    font-family: 'Buenard', serif;
+}
+.I{
+    color: pink;
+}
+.nav_items{
+    display: flex;
+    margin-right: 20px;
+    justify-content:space-evenly;
+    /* padding: 10px; */
+    /* position: relative; */
+    /* padding: 10px; */
+    list-style: none;
+
+}
+
+
+.humburger{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 22pt;
+    padding: 10px;
+}
+
+/* .humburger:focus{
+    outline: none;
+} */
+
+.nav_items > li > a{
+    text-decoration: none;
+    margin: 30px;
+
+    /* width: 20px; */
+    /* height: 10px; */
+    padding: 10px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+    /* transform: rotate(60deg); */
+    transition: color 500ms ease-in-out;
+}
+
+.nav_items a:hover{
+    color: goldenrod;
+    /* transform: rotate(60deg); */
+}
+
+.active a{
+    background: #967f01e8;
+}
+
+
+
+
+/*------------------NAV SECTION END-----------------*/
+
+
+#land{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* text-align: justify; */
+    height: 95vh;
+
+    /* background: grey; */
+}
+
+.text{
+    margin-top: 200px;
+}
+
+.innertext{
+    width: 45vw;
+    text-align: justify;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    line-height: 1.25;
+    /* padding-bottom: 100px; */
+    padding-top: 50px;
+    background: rgba(81, 81, 133, 0.514);
+}
+.innertext h1{
+    /* max-width: max-content; */
+    color: rgba(255, 255, 255, 0.863);
+    /* line-height: 3; */
+    /* font-family: 'Buenard', serif; */
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    /* font-family: 'Enriqueta', serif; */
+}
+.innertext h1 span{
+    font-size: 3rem;
+    /* margin: 0; */
+    /* line-height: 5; */
+}
+.ir{
+    /* line-height: 2; */
+    /* font-size: 4rem; */
+    margin-left: 200px;
+    /* line-height: 2; */
+}
+
+.innertext p{
+    /* font-family: 'Buenard', serif;*/
+    /* font-family: 'Cabin', sans-serif; */
+    font-family: 'Enriqueta', serif;
+}
+.btn a{
+    line-height: 1;
+    align-self: center;
+    margin-right: 250px;
+    margin-top: 1.5rem;
+    border-radius: 5em;
+    display: inline-block;
+    transition: background 500ms ease-in;
+}
+
+.btn a:hover{
+    background: #967f01e8;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px;
+}
+
+.icon-bar{
+    /* background: tan; */
+    align-self:flex-start;
+    margin-bottom: 70px;
+    /* padding-top: 8rem; */
+    font-size: 15pt;
+    
+}
+
+.icon-bar a{
+    display: block;
+    color: white;
+    margin: 10px;
+    transition: color 500ms ease-in;
+}
+
+.icon-bar a:hover{
+    color: #967f01e8;
+}
+
+
+
+/*******HEAD SECTION END**********/
+
+
+/* homepage media queries */
+
+
+@media screen and (max-width: 768px){
+    #nav{
+        justify-content: space-between;
+    }
+    .logo{
+        padding-left: 100px;
+    }
+    .nav_items{
+        display: none;
+    }
+
+    .nav_items .show{
+        display: block;
+        background: goldenrod;
+        height: 200px;
+        width: 200px;
+    }
+
+     .humburger{
+        display: block;
+    } 
+
+    .land{
+        height: 100vh;
+    }
+    .innertext h1{
+        max-width: max-content;
+    }
+    .innertext h1 span{
+        font-size: 1.5rem;
+        margin: 10px;
+        line-height: 1.8;
+        padding: 0;
+    }
+
+    .text{
+        margin-top: 80px;
+    }
+
+    .innertext{
+        width: 75vw;
+    }
+    
+
+
+}

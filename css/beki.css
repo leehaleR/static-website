@@ -1,0 +1,36 @@
+/*slideshow start*/
+
+main{
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    animation: animate 50s ease infinite;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    background: pink;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+@keyframes animate {
+    0%, 100%{
+        background-image: url(/assets/l1.png);
+    }
+    30%{
+        background-image: url(/assets/l2.png);
+    }
+    50%{
+        background-image: url(/assets/l3.png);
+    }
+    75%{
+        background-image: url(/assets/l4.png);
+    }
+}
+
+
+/*ends*/
